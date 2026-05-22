@@ -5,8 +5,7 @@ const addMember = async (req, res) => {
     const organization = await Organization.findById(organizationId);
     if (!organization) {
         return res.status(400).json({
-            message: "Organization not found"
-        });
+            message: "Organization not found"});
     }
     if (organization.members.includes(memberId)) {
         return res.status(400).json({
