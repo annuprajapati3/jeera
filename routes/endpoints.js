@@ -22,7 +22,7 @@ router.delete("/deleteprojects/:id", auth, authorization, deleteProject);
 router.put("/updateprojects/:id", auth, authorization, updateProject);
 router.post("/createorg", auth, createorg);
 router.post("/addmember", auth, authorization, addMember);
-router.get("/organization/all",authenticate,getOrganizations);
+router.get("/organization/all",auth,getOrganizations);
 
-router.get("/member/all",authenticate,getMembers);
+router.get("/member/all",auth,getMembers);
 module.exports = router;
